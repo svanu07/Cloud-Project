@@ -1,0 +1,20 @@
+---
+- name: Installation de MySQL
+  apt: name={{ item }} state=present
+  become: yes
+  with_items:
+    - mysql-server
+    - python-mysqldb
+
+
+
+- name: Creation de la base de donnée mysql
+  mysql_db: name={{ wp_mysql_db }} state=present
+  become: yes
+
+- name: Creation d'un utilisateur mysql
+  mysql_user: 
+    name={{ wp_mysql_user }} 
+    priv=*.*:ALL
+
+  become: yes

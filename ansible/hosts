@@ -1,0 +1,2 @@
+[wordpress]
+scalewayserver ansible_host=51.158.174.204 ansible_user=root

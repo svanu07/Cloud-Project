@@ -1,0 +1,16 @@
+- hosts: all
+  
+  tasks:
+  - name: installation de python 
+    apt: 
+      pkg: python-minimal
+      state: present
+      update_cache: true
+
+- hosts: wordpress
+
+  roles:
+    - server
+    - php
+    - mysql
+    - wordpress

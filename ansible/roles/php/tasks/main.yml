@@ -1,0 +1,18 @@
+---
+# tasks file for php
+- name: Installations de php et de ses extensions 
+  apt: name={{ item }} state=present
+  become: yes
+  with_items:
+    - php7.2-gd 
+    - php7.2-ssh2
+    - php7.2-mysql
+    - php7.2
+    - libapache2-mod-php7.2
+    - php7.2-fpm
+
+
+
+
+
+

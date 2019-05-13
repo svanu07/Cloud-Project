@@ -1,0 +1,11 @@
+---
+# tasks file for server
+- name: Mise à jour du serveur
+  apt: update_cache=yes 
+  become: yes
+
+- name: Installation du serveur apache
+  apt: name={{ item }} state=present
+  become: yes
+  with_items:
+    - apache2
