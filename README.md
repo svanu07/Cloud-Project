@@ -18,7 +18,7 @@ The goal of this project is to deploy a WordPress website on our own server.
 - Run ansible-playbook playbook.yml -i hosts -u root -K
 - Verify by typing on the browser the IP address of our server, and verify that there is a WordPress Site 
 
-##Terraform: main.tf
+## Terraform: main.tf
 
 - cd cloud-courses
 - Run terraform init
