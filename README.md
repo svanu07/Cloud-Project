@@ -11,14 +11,14 @@ The goal of this project is to deploy a WordPress website on our own server.
   3. Create an image with Packer
   
 
-#### Command for Ansible: playbook.yml
+## Ansible: playbook.yml
 
 - cd cloud-courses/ansible/ 
 - Run ansible -m ping all -i hosts to test if we can connect to the server by pinging it with Ansible
 - Run ansible-playbook playbook.yml -i hosts -u root -K
 - Verify by typing on the browser the IP address of our server, and verify that there is a WordPress Site 
 
-#### Command for Terraform: main.tf
+##Terraform: main.tf
 
 - cd cloud-courses
 - Run terraform init
@@ -26,7 +26,7 @@ The goal of this project is to deploy a WordPress website on our own server.
 - Run terraform apply
 - Verify in our scaleway account that the server has been created sucesfully
 
-#### Command for Packer: template.json
+## Packer: template.json
 
 - cd cloud-courses/ansible (because we are gonna use our playbook.yml file as provisionners)
 - Run packer validate template.json (to verify if our template.json file is configurate correctly)
