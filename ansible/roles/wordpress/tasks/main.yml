@@ -9,7 +9,7 @@
   unarchive: src=/tmp/wordpress.tar.gz dest=/var/www/ copy=no
   become: yes
 
-- name: Mise à jour du site Apache
+- name: Mise à jour fichier configuration Apache
   become: yes
   lineinfile: 
     dest=/etc/apache2/sites-enabled/000-default.conf 
