@@ -18,7 +18,7 @@
   notify:
     - redemarage d'apache
 
-- name: Copie et création du fichier de configuration wordpress
+- name: renommer le fichier de configuration wordpress et definir le PATH 
   command: mv /var/www/wordpress/wp-config-sample.php /var/www/wordpress/wp-config.php creates=/var/www/wordpress/wp-config.php
   become: yes
 
